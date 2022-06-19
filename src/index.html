@@ -5,11 +5,11 @@ path: home
 ---
 
 <div
-  class="container mx-auto lg:h-screen flex flex-col justify-center items-center dark:text-gray-100"
+  class="container mx-auto h-screen flex flex-col justify-center items-center dark:text-gray-100 snap-start"
 >
-  <h1 class="show-html-tag">
+  <h1>
     Hi, my name is
-    <strong class="bg-clip-text text-transparent bg-my-gradient"> Micu </strong>
+    <strong class="bg-clip-text text-transparent bg-my-gradient">Micu</strong>
   </h1>
   <h2 x-data="position">
     I am a
@@ -20,5 +20,25 @@ path: home
     ></strong>
   </h2>
 
+  <button
+    class="absolute bottom-20 flex flex-col items-center"
+    @click="document.getElementById('AboutMe').scrollIntoView({behavior: 'smooth'})"
+  >
+    <span
+      class="iconify"
+      data-icon="akar-icons:chevron-down"
+      data-width="32"
+    ></span>
+    <span class="lg:hidden">Swipe</span>
+    <span class="hidden lg:show">Scroll</span>
+  </button>
+
   <!-- {% include "./_includes/partials/content.html" %} -->
 </div>
+
+<section
+  class="container mx-auto h-screen flex flex-col justify-center items-center dark:text-gray-100 snap-start"
+  id="AboutMe"
+>
+  About me
+</section>

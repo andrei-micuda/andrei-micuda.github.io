@@ -1,4 +1,4 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
+<div class="{{ 'fixed' if path == 'home' }} w-full bg-white dark:bg-gray-800">
   <nav
     class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto"
     x-data="{ isOpen: false }"
@@ -20,7 +20,7 @@
     <button
       @click="isOpen = !isOpen"
       type="button"
-      class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500"
+      class="ml-auto block lg:hidden px-2 text-primary-500 dark:text-gray-100 hover:text-primary-500 focus:outline-none focus:text-primary-500"
       :class="{ 'transition transform-180': isOpen }"
       aria-label="Menu"
     >
