@@ -1,0 +1,36 @@
+* {
+  transition: all 0.5s;
+}
+
+body,
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.bg-my-gradient {
+  background-image: linear-gradient(to right, #b721ff, #21d4fd);
+}
+
+@keyframes wordSpin {
+  0% {
+    top: -10px;
+    opacity: 0;
+  }
+  10% {
+    top: 0px;
+    opacity: 1;
+  }
+  90% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: 10px;
+    opacity: 0;
+  }
+}
+
+.animated-word {
+  animation: wordSpin 5s forwards infinite;
+  transition: all ease;
+}
